@@ -1,0 +1,9 @@
+
+:javascript:S125"Remove this commented out code.(‰É˜°
+~javascript:S1172"]Remove the unused function parameter "col" or rename it to "_col" to make intention explicit.(Ïìªúÿÿÿÿ
+|javascript:S37763"TRefactor this function to reduce its Cognitive Complexity from 17 to the 15 allowed.(†ÑÜ­øÿÿÿÿ8ëõ¹¤0
+‰javascript:S1172{"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(˜âÁãùÿÿÿÿ8ÃÄÅ¤0
+‰javascript:S1172~"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(¶“ Âûÿÿÿÿ8ÄÄÅ¤0
+Wjavascript:S1117~"/'index' is already declared in the upper scope.(¶“ Âûÿÿÿÿ8ÅÄÅ¤0
+Sjavascript:S1117†"/'index' is already declared in the upper scope.(”ÀÓä8ÆÄÅ¤0
+[javascript:S1117ˆ"2'provided' is already declared in the upper scope.(µ¤÷Úùÿÿÿÿ8ÇÄÅ¤0

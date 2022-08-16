@@ -1,0 +1,21 @@
+
+…javascript:S1172*"]Remove the unused function parameter "col" or rename it to "_col" to make intention explicit.(Ïìªúÿÿÿÿ8äÂ¿»¤0
+`javascript:S1481H"8Remove the declaration of the unused 'setData' variable.(éŞĞ„øÿÿÿÿ8åÂ¿»¤0
+]javascript:S1854H"5Remove this useless assignment to variable "setData".(éŞĞ„øÿÿÿÿ8åÂ¿»¤0
+_javascript:S1481K"<Remove the declaration of the unused 'destination' variable.(®àê8æÂ¿»¤0
+\javascript:S1854K"9Remove this useless assignment to variable "destination".(®àê8æÂ¿»¤0
+kjavascript:S1854V"CRemove this useless assignment to variable "sourceJobManDateIndex".(¥ğ³ßıÿÿÿÿ8çÂ¿»¤0
+^javascript:S1854X"=Remove this useless assignment to variable "sourceJobManCol".(ì•‰úÿÿÿÿ
+Fjavascript:S125i"Remove this commented out code.(×õİûÿÿÿÿ8èÂ¿»¤0
+@javascript:S125n"Remove this commented out code.(ı³Ù!8èÂ¿»¤0
+Fjavascript:S125}"Remove this commented out code.(‘ö±šúÿÿÿÿ8éÂ¿»¤0
+Gjavascript:S125"Remove this commented out code.(àÕÊÃÿÿÿÿÿ8éÂ¿»¤0
+Šjavascript:S1172Ñ"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(˜âÁãùÿÿÿÿ8êÂ¿»¤0
+Sjavascript:S1117Ø"/'index' is already declared in the upper scope.(ÄÔÂÙ8ëÂ¿»¤0
+Tjavascript:S1117Û"2'provided' is already declared in the upper scope.(µ¤÷Úùÿÿÿÿ
+Šjavascript:S1172ğ"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(¶“ Âûÿÿÿÿ8ìÂ¿»¤0
+Xjavascript:S1117ğ"/'index' is already declared in the upper scope.(¶“ Âûÿÿÿÿ8ìÂ¿»¤0
+Sjavascript:S1117ø"/'index' is already declared in the upper scope.(Å¡˜Ÿ8ìÂ¿»¤0
+Tjavascript:S1117ú"2'provided' is already declared in the upper scope.(µ¤÷Úùÿÿÿÿ
+Sjavascript:S1117“"/'index' is already declared in the upper scope.(”ÀÓä8íÂ¿»¤0
+[javascript:S1117•"2'provided' is already declared in the upper scope.(µ¤÷Úùÿÿÿÿ8îÂ¿»¤0
