@@ -7,6 +7,7 @@ import { Pagination } from '../pagination/Pagination'
 import { ChakraResponsive } from '../chakra/ChakraResponsive'
 import { Loading } from '../loading/Loading'
 import { SendRequest } from '../loading/SendRequest'
+import { Map } from '../googlemap/Map'
 
 export const Router = () => {
   return (
@@ -19,6 +20,7 @@ export const Router = () => {
         <Route path="/chakra_responsive" element={<ChakraResponsive />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="/sendrequest" element={<SendRequest />} />
+        <Route path="/map" element={<Map />} />
       </Routes>
     </>
   )
