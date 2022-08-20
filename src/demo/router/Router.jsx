@@ -8,6 +8,7 @@ import { ChakraResponsive } from '../chakra/ChakraResponsive'
 import { Loading } from '../loading/Loading'
 import { SendRequest } from '../loading/SendRequest'
 import { Map } from '../googlemap/Map'
+import { TableLayout } from '../chakra/TableLayout'
 
 export const Router = () => {
   return (
@@ -21,6 +22,7 @@ export const Router = () => {
         <Route path="/loading" element={<Loading />} />
         <Route path="/sendrequest" element={<SendRequest />} />
         <Route path="/map" element={<Map />} />
+        <Route path="/table" element={<TableLayout />} />
       </Routes>
     </>
   )

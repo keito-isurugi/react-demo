@@ -16,6 +16,7 @@ export const Header = () => {
       <SNavLink to="/loading">loading</SNavLink>
       <SNavLink to="/sendrequest">sendrequest</SNavLink>
       <SNavLink to="/map">map</SNavLink>
+      <SNavLink to="/table">table</SNavLink>
     </Box>
   )
 }
