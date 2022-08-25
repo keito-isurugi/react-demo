@@ -9,6 +9,8 @@ import { Loading } from '../loading/Loading'
 import { SendRequest } from '../loading/SendRequest'
 import { Map } from '../googlemap/Map'
 import { TableLayout } from '../chakra/TableLayout'
+import { DndTable } from '../beautifuldnd/calendar/DndTable'
+import { Hooks } from '../hooks/Hooks'
 
 export const Router = () => {
   return (
@@ -23,6 +25,8 @@ export const Router = () => {
         <Route path="/sendrequest" element={<SendRequest />} />
         <Route path="/map" element={<Map />} />
         <Route path="/table" element={<TableLayout />} />
+        <Route path="/dnd" element={<DndTable />} />
+        <Route path="/hooks" element={<Hooks />} />
       </Routes>
     </>
   )

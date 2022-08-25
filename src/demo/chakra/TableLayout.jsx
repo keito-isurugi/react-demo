@@ -49,7 +49,7 @@ export const TableLayout = () => {
             <Td style={tdStyle}>日本語を設定すると、いい感じで改行されます。下の例では2行におさまるように幅が割り付けられます。</Td>
             <Td style={tdStyle}>日本語を設定すると、いい感じで改行されます。下の例では2行におさまるように幅が割り付けられます。</Td>
             <Td style={tdStyle}>日本語を設定すると、いい感じで改行されます。下の例では2行におさまるように幅が割り付けられます。</Td>
-            <Td style={tdStyle}>日本語を設定すると、いい感じで改行されます。下の例では2行におさまるように幅が割り付けられます。</Td>
+            <Td style={tdStyle}>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Td>
           </Tr>
         </Tbody>
       </Table>
