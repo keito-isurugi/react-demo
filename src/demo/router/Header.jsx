@@ -19,6 +19,8 @@ export const Header = () => {
       <SNavLink to="/table">table</SNavLink>
       <SNavLink to="/dnd">dnd</SNavLink>
       <SNavLink to="/hooks">hooks</SNavLink>
+      <SNavLink to="/css">css</SNavLink>
+      <SNavLink to="/color_picker">color_picker</SNavLink>
     </Box>
   )
 }

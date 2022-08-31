@@ -11,6 +11,8 @@ import { Map } from '../googlemap/Map'
 import { TableLayout } from '../chakra/TableLayout'
 import { DndTable } from '../beautifuldnd/calendar/DndTable'
 import { Hooks } from '../hooks/Hooks'
+import { Css } from "../css/Css"
+import { ColorPicker } from "../color_picker/ColorPicker"
 
 export const Router = () => {
   return (
@@ -27,6 +29,8 @@ export const Router = () => {
         <Route path="/table" element={<TableLayout />} />
         <Route path="/dnd" element={<DndTable />} />
         <Route path="/hooks" element={<Hooks />} />
+        <Route path="/css" element={<Css />} />
+        <Route path="/color_picker" element={<ColorPicker />} />
       </Routes>
     </>
   )
