@@ -14,6 +14,7 @@ import { Hooks } from '../hooks/Hooks'
 import { Css } from "../css/Css"
 import { ColorPicker } from "../color_picker/ColorPicker"
 import { BigParent } from "../hooks/BigParent"
+import { Ref } from "../hooks/Ref"
 
 export const Router = () => {
   
@@ -34,6 +35,7 @@ export const Router = () => {
         <Route path="/css" element={<Css />} />
         <Route path="/color_picker" element={<ColorPicker />} />
         <Route path="/use_context" element={<BigParent />} />
+        <Route path="/use_ref" element={<Ref />} />
       </Routes>
     </>
   )

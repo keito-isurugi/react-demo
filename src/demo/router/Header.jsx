@@ -7,7 +7,7 @@ import {
 
 export const Header = () => {
   return (
-    <Box mb={10}>
+    <Box mb={10} border="1px" height="100px">
       <SNavLink to="/home">Home</SNavLink>
       <SNavLink to="/about">About</SNavLink>
       <SNavLink to="/dropzone">Dropzone</SNavLink>
@@ -22,12 +22,14 @@ export const Header = () => {
       <SNavLink to="/css">css</SNavLink>
       <SNavLink to="/color_picker">color_picker</SNavLink>
       <SNavLink to="/use_context">use_context</SNavLink>
+      <SNavLink to="/use_ref">use_ref</SNavLink>
     </Box>
   )
 }
 
 const SNavLink = styled(NavLink)`
   font-weight: bold;
-  margin-right: 10px;
-  padding: 10px;
+  margin: 10px;
+  padding: 8px;
+  height: 25px;
 `

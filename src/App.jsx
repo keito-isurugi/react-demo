@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter, Route, Routes, Link, NavLink, useResolvedPath, useMatch, useNavigate, Outlet } from "react-router-dom"
 import {
   ChakraProvider,
-  theme,
+  Box
+  // theme,
 } from '@chakra-ui/react';
 
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import cssTest from './test.module.css';
 import { Sample1 } from './demo/beautifuldnd/Sample1'
 import { MultiColumns } from './demo/beautifuldnd/MultiColumns'
@@ -21,14 +22,16 @@ import { Router } from './demo/router/Router'
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       <BrowserRouter>
+      <Box p={10}>
         <Header />
         {/* <Pagination itemsPerPage={4}/>
         <Dropzone/> */}
         {/* <h1 className={cssTest.red}>CSS TEST</h1> */}
         {/* <ChakraResponsive/> */}
         <Router />
+      </Box>
       </BrowserRouter>
     </ChakraProvider>
   );
