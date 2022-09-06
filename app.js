@@ -14,7 +14,7 @@ const hoge = (message) => {
   console.log(message);
 };
 
-// hoge(new Person('Person').name);
+hoge(new Person("Person").name);
 
 const fooBar = (a, b, c) => {
   console.log(a);
@@ -29,9 +29,3 @@ fooBar(
   },
   profile
 );
-const a = new Person();
-
-a;
-hoge();
-console.log(a);
-console.log(hoge());

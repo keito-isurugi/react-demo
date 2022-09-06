@@ -1,37 +1,37 @@
-class Person{
+class Person {
   constructor(name) {
-    this.name =   name;
+    this.name = name;
   }
-
 }
-
 
 const profile = {
-  name: 'soarflat', sex: 'male', location: 'Tokyo'
-
+  name: "soarflat",
+  sex: "male",
+  location: "Tokyo",
 };
 
-const hoge = (message)=>{
+const hoge = (message) => {
   console.log(message);
-}
-
-// hoge(new Person('Person').name);
-
-const fooBar = (a, b, c) =>{
-    console.log(a);
-  console.log(b)
-   console.log(c);
 };
 
-fooBar(111,
-    {
-        hoge: 'hoge!'
-    },profile
-)
+hoge(new Person("Person").name);
 
-const a = new Person()
+const fooBar = (a, b, c) => {
+  console.log(a);
+  console.log(b);
+  console.log(c);
+};
 
-a
-hoge()
-console.log(a)
-console.log(hoge())
+fooBar(
+  111,
+  {
+    hoge: "hoge!",
+  },
+  profile
+);
+
+const test = () => {
+  return "test";
+};
+
+console.log(test());
