@@ -32,6 +32,7 @@ export const Header = () => {
       <SNavLink to="/use_context">use_context</SNavLink>
       <SNavLink to="/use_ref">use_ref</SNavLink>
       <SNavLink to="/props">props</SNavLink>
+      <SNavLink to="/rendering">rendering</SNavLink>
     </Box>
   );
 };

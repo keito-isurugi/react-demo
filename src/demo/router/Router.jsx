@@ -26,6 +26,7 @@ import { ColorPicker } from "../color_picker/ColorPicker";
 import { BigParent } from "../hooks/BigParent";
 import { Ref } from "../hooks/Ref";
 import { Props } from "../props/Props"
+import { Rendering } from "../rendering/Rendering"
 
 export const Router = () => {
   return (
@@ -47,6 +48,7 @@ export const Router = () => {
         <Route path="/use_context" element={<BigParent />} />
         <Route path="/use_ref" element={<Ref />} />
         <Route path="/props" element={<Props />} />
+        <Route path="/rendering" element={<Rendering />} />
       </Routes>
     </>
   );
