@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid'
+import { v4 as uuidv4 } from "uuid";
 
 export const dummyData = [
   {
@@ -17,7 +17,7 @@ export const dummyData = [
         id: uuidv4(),
         title: "散歩",
       },
-    ]
+    ],
   },
   {
     id: uuidv4(),
@@ -31,7 +31,7 @@ export const dummyData = [
         id: uuidv4(),
         title: "筋トレ",
       },
-    ]
+    ],
   },
   {
     id: uuidv4(),
@@ -41,6 +41,6 @@ export const dummyData = [
         id: uuidv4(),
         title: "読書",
       },
-    ]
+    ],
   },
-]
+];

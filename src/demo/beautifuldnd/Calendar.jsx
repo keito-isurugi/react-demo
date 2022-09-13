@@ -13,38 +13,38 @@ const itemsFromBackend = [
   { id: uuid(), content: "Foo" },
 ];
 
-const foo = {}
-const date = [...Array(31).keys()]
+const foo = {};
+const date = [...Array(31).keys()];
 date.map((day) => {
-  let id = [uuid()]
-  foo[`${id}`] = { 
-    name: day, 
-    items: itemsFromBackend
-  }
-})
+  let id = [uuid()];
+  foo[`${id}`] = {
+    name: day,
+    items: itemsFromBackend,
+  };
+});
 
 // 項目(追加すると列が増える)
 const columnsFromBackend = {
   [uuid()]: {
     name: "Requested",
-    items: itemsFromBackend
+    items: itemsFromBackend,
   },
   [uuid()]: {
     name: "To do",
-    items: []
+    items: [],
   },
   [uuid()]: {
     name: "In Progress",
-    items: []
+    items: [],
   },
   [uuid()]: {
     name: "Done",
-    items: []
+    items: [],
   },
   [uuid()]: {
     name: "Hoge",
-    items: []
-  }
+    items: [],
+  },
 };
 // console.log(foo)
 // console.log(columnsFromBackend)
@@ -64,12 +64,12 @@ const onDragEnd = (result, columns, setColumns) => {
       ...columns,
       [source.droppableId]: {
         ...sourceColumn,
-        items: sourceItems
+        items: sourceItems,
       },
       [destination.droppableId]: {
         ...destColumn,
-        items: destItems
-      }
+        items: destItems,
+      },
     });
   } else {
     const column = columns[source.droppableId];
@@ -80,8 +80,8 @@ const onDragEnd = (result, columns, setColumns) => {
       ...columns,
       [source.droppableId]: {
         ...column,
-        items: copiedItems
-      }
+        items: copiedItems,
+      },
     });
   }
 };
@@ -91,7 +91,7 @@ export const Calendar = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext
-        onDragEnd={result => onDragEnd(result, columns, setColumns)}
+        onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
       >
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
@@ -99,7 +99,7 @@ export const Calendar = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center"
+                alignItems: "center",
               }}
               key={columnId}
             >
@@ -117,7 +117,7 @@ export const Calendar = () => {
                             : "lightgrey",
                           padding: 4,
                           width: 250,
-                          minHeight: 500
+                          minHeight: 500,
                         }}
                       >
                         {column.items.map((item, index) => {
@@ -142,7 +142,7 @@ export const Calendar = () => {
                                         ? "#263B4A"
                                         : "#456C86",
                                       color: "white",
-                                      ...provided.draggableProps.style
+                                      ...provided.draggableProps.style,
                                     }}
                                   >
                                     {item.content}
@@ -164,6 +164,6 @@ export const Calendar = () => {
       </DragDropContext>
     </div>
   );
-}
+};
 
 export default Calendar;

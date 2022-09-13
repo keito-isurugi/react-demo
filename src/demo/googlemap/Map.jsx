@@ -1,5 +1,10 @@
-import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
-import ApiKey from '../../const/api'
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
+import ApiKey from "../../const/api";
 
 const containerStyle = {
   height: "80vh",
@@ -42,15 +47,11 @@ export const Map = () => {
     <>
       <h1>Google Map</h1>
       <LoadScript googleMapsApiKey={ApiKey}>
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={17}
-          >
-            <Marker position={positionAkiba} label={markerLabelAkiba} />
-            <Marker position={positionIwamotocho} label={markerLabelIwamotocho} />
-          </GoogleMap>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
+          <Marker position={positionAkiba} label={markerLabelAkiba} />
+          <Marker position={positionIwamotocho} label={markerLabelIwamotocho} />
+        </GoogleMap>
       </LoadScript>
     </>
-  )
-}
+  );
+};

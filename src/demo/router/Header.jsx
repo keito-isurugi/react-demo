@@ -1,9 +1,17 @@
-import { BrowserRouter, Route, Routes, Link, NavLink, useResolvedPath, useMatch, useNavigate, Outlet } from "react-router-dom"
-import styled from '@emotion/styled'
-import './router.css'
 import {
-  Box
-} from '@chakra-ui/react';
+  BrowserRouter,
+  Route,
+  Routes,
+  Link,
+  NavLink,
+  useResolvedPath,
+  useMatch,
+  useNavigate,
+  Outlet,
+} from "react-router-dom";
+import styled from "@emotion/styled";
+import "./router.css";
+import { Box } from "@chakra-ui/react";
 
 export const Header = () => {
   return (
@@ -23,13 +31,14 @@ export const Header = () => {
       <SNavLink to="/color_picker">color_picker</SNavLink>
       <SNavLink to="/use_context">use_context</SNavLink>
       <SNavLink to="/use_ref">use_ref</SNavLink>
+      <SNavLink to="/props">props</SNavLink>
     </Box>
-  )
-}
+  );
+};
 
 const SNavLink = styled(NavLink)`
   font-weight: bold;
   margin: 10px;
   padding: 8px;
   height: 25px;
-`
+`;

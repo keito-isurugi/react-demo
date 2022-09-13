@@ -1,10 +1,7 @@
-import React from 'react';
+import React from "react";
 // Grandchildをimportする。
-import { Grandchild } from './Grandchild';
+import { Grandchild } from "./Grandchild";
 
 export const Child = () => {
-  return (
-    <Grandchild />
-  )
-}
-
+  return <Grandchild />;
+};

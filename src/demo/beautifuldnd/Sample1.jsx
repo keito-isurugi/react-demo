@@ -15,17 +15,16 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   background: isDragging ? "aqua" : "white",
   fontSize: "20px",
   color: "red",
-  ...draggableStyle
+  ...draggableStyle,
 });
 
 // ドラッグ&ドロップの外枠と配置先のスタイル(通常:黒、移動中:緑)
 const getListStyle = (isDraggingOver) => ({
   background: isDraggingOver ? "green" : "black",
-  padding: "10px"
+  padding: "10px",
 });
 
 export const Sample1 = () => {
-
   // 表示するリストの配列
   const [questions, setQuestions] = useState([
     { id: 1, title: "question1" },
@@ -38,7 +37,7 @@ export const Sample1 = () => {
 
   // ドラッグ終了時の処理
   const onDragEnd = (result) => {
-    console.log(result)
+    console.log(result);
     // ドロップ先がない
     if (!result.destination) {
       return;

@@ -7,13 +7,15 @@ export const Main = () => {
   const [data, setData] = useState(dummyData);
 
   const onDragEnd = (result) => {
-    const {source, destination} = result
+    const { source, destination } = result;
 
     // 別のカラムにタスク移動
-    if(source.droppableId !== destination.droppableId) {
+    if (source.droppableId !== destination.droppableId) {
       // 同じカラム内でのタスクの入れ替え
-      const sourceColIndex = data.findIndex((e) => e.id === source.droppableId)
-      const destinationColIndex = data.findIndex((e) => e.id === destination.droppableId)
+      const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
+      const destinationColIndex = data.findIndex(
+        (e) => e.id === destination.droppableId
+      );
       const sourceCol = data[sourceColIndex];
       const destinationCol = data[destinationColIndex];
       // タスクの配列コピー、こちらでタスク移動の処理(削除と追加)を行う
@@ -29,10 +31,10 @@ export const Main = () => {
       setData(data);
     } else {
       // 同じカラム内でのタスクの入れ替え
-      const sourceColIndex = data.findIndex((e) => e.id === source.droppableId)
+      const sourceColIndex = data.findIndex((e) => e.id === source.droppableId);
       const sourceCol = data[sourceColIndex];
       // タスクの配列コピー、こちらでタスク移動の処理(削除と追加)を行う
-      const sourceTask = [...sourceCol.tasks]
+      const sourceTask = [...sourceCol.tasks];
       // タスクの削除
       const [removed] = sourceTask.splice(source.index, 1);
       // タスクの追加
@@ -41,7 +43,7 @@ export const Main = () => {
       data[sourceColIndex].tasks = sourceTask;
       setData(data);
     }
-  }
+  };
 
   return (
     <>
@@ -50,11 +52,19 @@ export const Main = () => {
           {data.map((section) => (
             <Droppable key={section.id} droppableId={section.id}>
               {(provided) => (
-                <div className="trello-section" ref={provided.innerRef} {...provided.droppableProps}>
+                <div
+                  className="trello-section"
+                  ref={provided.innerRef}
+                  {...provided.droppableProps}
+                >
                   <div className="trello-section-title">{section.title}</div>
                   <div className="trello-section-content">
                     {section.tasks.map((task, index) => (
-                      <Draggable key={task.id} draggableId={task.id} index={index}>
+                      <Draggable
+                        key={task.id}
+                        draggableId={task.id}
+                        index={index}
+                      >
                         {(provided, snapshot) => (
                           <div
                             ref={provided.innerRef}
@@ -79,5 +89,5 @@ export const Main = () => {
         </div>
       </DragDropContext>
     </>
-  )
-}
+  );
+};

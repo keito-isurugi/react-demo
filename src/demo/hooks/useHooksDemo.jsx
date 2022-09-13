@@ -10,4 +10,4 @@ export const useHooksDemo = () => {
   const decrementCount = () => setCount((count) => count - 1);
 
   return [count, { setCount, incrementCount, decrementCount }];
-}
+};

@@ -13,29 +13,28 @@ const reorder = (list, startIndex, endIndex) => {
 // ドラッグ&ドロップの質問のスタイル
 const getItemStyle = (isDragging, draggableStyle) => ({
   background: isDragging ? "#757ce8" : "white",
-  ...draggableStyle
+  ...draggableStyle,
 });
 
 // ドラッグ&ドロップのリストのスタイル
 const getListStyle = (isDraggingOver) => ({
   background: isDraggingOver ? "#1769aa" : "lightgrey",
-  padding: "10px"
+  padding: "10px",
 });
 
 export const BeautifulDnd = () => {
-
   // 表示するリストの配列
   const [questions, setQuestions] = useState([
     { id: 1, title: "question1" },
     { id: 2, title: "question2" },
     { id: 3, title: "question3" },
     { id: 4, title: "question4" },
-    { id: 5, title: "question5" }
+    { id: 5, title: "question5" },
   ]);
 
   // ドラッグ終了時の処理
   const onDragEnd = (result) => {
-    console.log(result)
+    console.log(result);
     // ドロップ先がない
     if (!result.destination) {
       return;

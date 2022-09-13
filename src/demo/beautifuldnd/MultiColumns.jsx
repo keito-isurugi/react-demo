@@ -17,24 +17,24 @@ const itemsFromBackend = [
 const columnsFromBackend = {
   [uuid()]: {
     name: "Requested",
-    items: itemsFromBackend
+    items: itemsFromBackend,
   },
   [uuid()]: {
     name: "To do",
-    items: []
+    items: [],
   },
   [uuid()]: {
     name: "In Progress",
-    items: []
+    items: [],
   },
   [uuid()]: {
     name: "Done",
-    items: []
+    items: [],
   },
   [uuid()]: {
     name: "Hoge",
-    items: []
-  }
+    items: [],
+  },
 };
 
 const onDragEnd = (result, columns, setColumns) => {
@@ -52,12 +52,12 @@ const onDragEnd = (result, columns, setColumns) => {
       ...columns,
       [source.droppableId]: {
         ...sourceColumn,
-        items: sourceItems
+        items: sourceItems,
       },
       [destination.droppableId]: {
         ...destColumn,
-        items: destItems
-      }
+        items: destItems,
+      },
     });
   } else {
     const column = columns[source.droppableId];
@@ -68,8 +68,8 @@ const onDragEnd = (result, columns, setColumns) => {
       ...columns,
       [source.droppableId]: {
         ...column,
-        items: copiedItems
-      }
+        items: copiedItems,
+      },
     });
   }
 };
@@ -79,7 +79,7 @@ export const MultiColumns = () => {
   return (
     <div style={{ display: "flex", justifyContent: "center", height: "100%" }}>
       <DragDropContext
-        onDragEnd={result => onDragEnd(result, columns, setColumns)}
+        onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
       >
         {Object.entries(columns).map(([columnId, column], index) => {
           return (
@@ -87,7 +87,7 @@ export const MultiColumns = () => {
               style={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center"
+                alignItems: "center",
               }}
               key={columnId}
             >
@@ -105,7 +105,7 @@ export const MultiColumns = () => {
                             : "lightgrey",
                           padding: 4,
                           width: 250,
-                          minHeight: 500
+                          minHeight: 500,
                         }}
                       >
                         {column.items.map((item, index) => {
@@ -130,7 +130,7 @@ export const MultiColumns = () => {
                                         ? "#263B4A"
                                         : "#456C86",
                                       color: "white",
-                                      ...provided.draggableProps.style
+                                      ...provided.draggableProps.style,
                                     }}
                                   >
                                     {item.content}
@@ -152,6 +152,6 @@ export const MultiColumns = () => {
       </DragDropContext>
     </div>
   );
-}
+};
 
 export default MultiColumns;
