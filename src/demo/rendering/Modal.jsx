@@ -34,7 +34,7 @@ export const ModalPage = (props) => {
           </ModalFooter>
         </ModalContent>
       </Modal> */}
-    <h1>aaa</h1>
+      <h1>aaa</h1>
     </>
   )
 }

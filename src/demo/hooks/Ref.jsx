@@ -4,7 +4,7 @@ export const Ref = () => {
   const inputElement = useRef(null);
   const doClick = () => {
     // inputElement.currentで <input type="text" /> を参照できる。
-    nputElement.current.focus();
+    inputElement.current.focus();
     console.log("inputElement", inputElement.current.id);
   };
 

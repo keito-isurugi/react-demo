@@ -15,7 +15,7 @@ import { About } from "./About";
 import { Dropzone } from "../dropzone/Dropzone";
 import { Pagination } from "../pagination/Pagination";
 import { ChakraResponsive } from "../chakra/ChakraResponsive";
-import { Loading } from "../loading/Loading";
+import { LoadingDemoPage } from "../loading/LoadingDemoPage";
 import { SendRequest } from "../loading/SendRequest";
 import { Map } from "../googlemap/Map";
 import { TableLayout } from "../chakra/TableLayout";
@@ -37,7 +37,7 @@ export const Router = () => {
         <Route path="/dropzone" element={<Dropzone />} />
         <Route path="/pagination" element={<Pagination />} />
         <Route path="/chakra_responsive" element={<ChakraResponsive />} />
-        <Route path="/loading" element={<Loading />} />
+        <Route path="/loading" element={<LoadingDemoPage />} />
         <Route path="/sendrequest" element={<SendRequest />} />
         <Route path="/map" element={<Map />} />
         <Route path="/table" element={<TableLayout />} />
