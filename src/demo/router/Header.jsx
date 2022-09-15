@@ -1,13 +1,5 @@
 import {
-  BrowserRouter,
-  Route,
-  Routes,
-  Link,
   NavLink,
-  useResolvedPath,
-  useMatch,
-  useNavigate,
-  Outlet,
 } from "react-router-dom";
 import styled from "@emotion/styled";
 import "./router.css";
@@ -33,6 +25,7 @@ export const Header = () => {
       <SNavLink to="/use_ref">use_ref</SNavLink>
       <SNavLink to="/props">props</SNavLink>
       <SNavLink to="/rendering">rendering</SNavLink>
+      <SNavLink to="/axios">axios</SNavLink>
     </Box>
   );
 };

@@ -1,13 +1,6 @@
 import {
-  BrowserRouter,
   Route,
   Routes,
-  Link,
-  NavLink,
-  useResolvedPath,
-  useMatch,
-  useNavigate,
-  Outlet,
 } from "react-router-dom";
 
 import { Home } from "./Home";
@@ -27,6 +20,7 @@ import { BigParent } from "../hooks/BigParent";
 import { Ref } from "../hooks/Ref";
 import { Props } from "../props/Props"
 import { Rendering } from "../rendering/Rendering"
+import { AxiosDemo } from "../axios/AxiosDemo"
 
 export const Router = () => {
   return (
@@ -49,6 +43,7 @@ export const Router = () => {
         <Route path="/use_ref" element={<Ref />} />
         <Route path="/props" element={<Props />} />
         <Route path="/rendering" element={<Rendering />} />
+        <Route path="/axios" element={<AxiosDemo />} />
       </Routes>
     </>
   );

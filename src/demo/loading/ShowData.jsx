@@ -7,9 +7,9 @@ export const ShowData = (props) => {
     <>
       <div>
         {data &&
-          data.map((photo) => (
-            <div key={photo.id}>
-              id:{photo.id},name:{photo.title}
+          data.map((data) => (
+            <div key={data.id}>
+              id:{data.id},name:{data.title}
             </div>
           ))}
       </div>
