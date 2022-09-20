@@ -37,10 +37,25 @@ export const AxiosDemo = () => {
       });
   };
 
+  const fetchCors = () => {
+    setIsLoading(true);
+    axios
+      .get("http://localhost:8009/api/staffs")
+      .then((res) => {
+        setDatas(res.data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
+  };
+
   return (
     <>
       <Button onClick={() => {fetchPhotos()}}>写真データ取得</Button>
       <Button onClick={() => {fetchComments()}}>コメントデータ取得</Button>
+      <Button onClick={() => {fetchCors()}}>CORS許可確認</Button>
       {isLoading ? <Spinar/> : <ViewData datas={datas}/>}
     </>
   )
