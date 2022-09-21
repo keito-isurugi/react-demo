@@ -10,8 +10,8 @@ import ApiKey from "../../const/api";
 
 
 const containerStyle = {
-  height: "50vh",
-  width: "80%",
+  height: "500px",
+  width: "50%",
 };
 
 const markerLabelAkiba = {
@@ -33,12 +33,7 @@ const markerLabelIwamotocho = {
 export const Map = () => {
   const [ lat, setLat ] = useState(36.687669847803264)
   const [ lon, setLon ] = useState(137.2187549153436)
-  
-  const [map, setMap] = useState(null);
-  const [maps, setMaps] = useState(null);
-  const [geocoder, setGeocoder] = useState(null);
   const [address, setAddress] = useState("富山県富山市五番町5-6 河上ビル 4F");
-  const [marker, setMarker] = useState(null);
 
 
   const center = {
@@ -79,7 +74,7 @@ export const Map = () => {
     <>
       <h1>Google Map</h1>
       <LoadScript googleMapsApiKey={ApiKey}>
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
           <Marker position={positionAkiba} label={markerLabelAkiba} />
           {/* <Marker position={positionIwamotocho} label={markerLabelIwamotocho} /> */}
         </GoogleMap>

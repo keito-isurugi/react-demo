@@ -21,6 +21,7 @@ import { Ref } from "../hooks/Ref";
 import { Props } from "../props/Props"
 import { Rendering } from "../rendering/Rendering"
 import { AxiosDemo } from "../axios/AxiosDemo"
+import { CheckboxDemo } from "../chakra/CheckboxDemo";
 
 export const Router = () => {
   return (
@@ -44,6 +45,7 @@ export const Router = () => {
         <Route path="/props" element={<Props />} />
         <Route path="/rendering" element={<Rendering />} />
         <Route path="/axios" element={<AxiosDemo />} />
+        <Route path="/checkbox" element={<CheckboxDemo />} />
       </Routes>
     </>
   );
