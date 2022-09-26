@@ -5,7 +5,7 @@ import {
 
 import { Home } from "./Home";
 import { About } from "./About";
-import { Dropzone } from "../dropzone/Dropzone";
+import { DropzoneDemo } from "../dropzone/DropzoneDemo";
 import { Pagination } from "../pagination/Pagination";
 import { ChakraResponsive } from "../chakra/ChakraResponsive";
 import { LoadingDemoPage } from "../loading/LoadingDemoPage";
@@ -22,6 +22,7 @@ import { Props } from "../props/Props"
 import { Rendering } from "../rendering/Rendering"
 import { AxiosDemo } from "../axios/AxiosDemo"
 import { CheckboxDemo } from "../chakra/CheckboxDemo";
+import { ImportDemo } from "../import/ImportDemo";
 
 export const Router = () => {
   return (
@@ -29,7 +30,7 @@ export const Router = () => {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/dropzone" element={<Dropzone />} />
+        <Route path="/dropzone" element={<DropzoneDemo />} />
         <Route path="/pagination" element={<Pagination />} />
         <Route path="/chakra_responsive" element={<ChakraResponsive />} />
         <Route path="/loading" element={<LoadingDemoPage />} />
@@ -46,6 +47,7 @@ export const Router = () => {
         <Route path="/rendering" element={<Rendering />} />
         <Route path="/axios" element={<AxiosDemo />} />
         <Route path="/checkbox" element={<CheckboxDemo />} />
+        <Route path="/import" element={<ImportDemo />} />
       </Routes>
     </>
   );

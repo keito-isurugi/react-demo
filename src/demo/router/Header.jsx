@@ -27,6 +27,7 @@ export const Header = () => {
       <SNavLink to="/rendering">rendering</SNavLink>
       <SNavLink to="/axios">axios</SNavLink>
       <SNavLink to="/checkbox">checkbox</SNavLink>
+      <SNavLink to="/import">import</SNavLink>
     </Box>
   );
 };

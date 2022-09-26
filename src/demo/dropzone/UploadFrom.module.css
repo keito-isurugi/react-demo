@@ -1,0 +1,26 @@
+.fileInput {
+  display: none;
+}
+.field {
+  background-color: rgb(224, 236, 252);
+  border-radius: 10px;
+  border: dashed 2px gray;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+}
+.dropActive {
+  background-color: rgb(152, 185, 235);
+  border-radius: 10px;
+  border: dashed 2px gray;
+  padding: 20px;
+  margin: 5px;
+  text-align: center;
+}
+.dropField {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.itemWrap {
+  margin-top: 20px;
+}

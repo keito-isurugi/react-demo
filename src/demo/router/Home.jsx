@@ -1,5 +1,7 @@
+import React, {useState, useEffect} from 'react'
 import { COLORS } from '../../constants.js'
 import { Box, Text } from '@chakra-ui/react'
+
 export const Home = () => {
   
   const str = 'Hello'
@@ -17,10 +19,10 @@ const params = ([
 
 const strJson = '{"result":true, "count":42}'
 const json = JSON.parse(strJson)
-console.log(strJson)
-console.log(typeof(strJson))
-console.log(json)
-console.log(typeof(json))
+// console.log(strJson)
+// console.log(typeof(strJson))
+// console.log(json)
+// console.log(typeof(json))
 
 
   return (
@@ -43,9 +45,7 @@ console.log(typeof(json))
         <Text fontSize={20} fontWeight="bold">環境変数</Text>
         <p>{COLORS.SUB_BUTTON}</p>
       </Box>
-      <Box mb={5}>
-        <Text fontSize={20} fontWeight="bold">文字列をjsonに変換</Text>
-      </Box>
+
     </>
   );
 };
