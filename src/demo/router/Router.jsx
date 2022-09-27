@@ -16,13 +16,14 @@ import { DndTable } from "../beautifuldnd/calendar/DndTable";
 import { Hooks } from "../hooks/Hooks";
 import { Css } from "../css/Css";
 import { ColorPicker } from "../color_picker/ColorPicker";
-import { BigParent } from "../hooks/BigParent";
+import { BigParent } from "../hooks/usecontext/BigParent";
 import { Ref } from "../hooks/Ref";
 import { Props } from "../props/Props"
 import { Rendering } from "../rendering/Rendering"
 import { AxiosDemo } from "../axios/AxiosDemo"
 import { CheckboxDemo } from "../chakra/CheckboxDemo";
 import { ImportDemo } from "../import/ImportDemo";
+import MemoDemo from "../hooks/memo/MemoDemo";
 
 export const Router = () => {
   return (
@@ -48,6 +49,7 @@ export const Router = () => {
         <Route path="/axios" element={<AxiosDemo />} />
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/import" element={<ImportDemo />} />
+        <Route path="/memo" element={<MemoDemo />} />
       </Routes>
     </>
   );
