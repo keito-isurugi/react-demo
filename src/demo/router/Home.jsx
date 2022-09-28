@@ -1,11 +1,21 @@
 import React, {useState, useEffect} from 'react'
 import { COLORS } from '../../constants.js'
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Text, Button, FormLabel, Input } from '@chakra-ui/react'
 
 export const Home = () => {
-  
+  const datas = ([
+    {text: "aaa"},
+    {text: "bbb"},
+    {text: "ccc"},
+  ])
+  const [formData, setFormData] = useState(datas)
   const str = 'Hello'
   const num = 123
+  const addFormData = () => {
+    const formDataCp = [...formData]
+    formDataCp.push({text: ""})
+    setFormData(formDataCp)
+  }
 
 // key, value
 const params = ([
@@ -45,7 +55,21 @@ const json = JSON.parse(strJson)
         <Text fontSize={20} fontWeight="bold">環境変数</Text>
         <p>{COLORS.SUB_BUTTON}</p>
       </Box>
-
+      <Box mb={5}>
+        <Text fontSize={20} fontWeight="bold">動的に要素を追加</Text>
+        <Box p={4} width="40%">
+          {formData.map((elm, index) => (
+            <>
+            <Box p={1} mb={1} display="flex" gap={5}>
+              <FormLabel width="20%">予定</FormLabel>
+              <Input defaultValue={elm.text}/>
+              <Button onClick={() => addFormData()}>追加</Button>
+            </Box>
+            </>
+          ))}
+        </Box>
+        <Button onClick={() => addFormData()}>追加</Button>
+      </Box>
     </>
   );
 };

@@ -75,7 +75,6 @@ function Counter() {
 
 const DispatchHoge = React.memo(({ dispatch }) => {
   console.log("ほげ");
-
   return (
     <>
       <h1>hoge</h1>
@@ -84,8 +83,14 @@ const DispatchHoge = React.memo(({ dispatch }) => {
 });
 
 function Hoge() {
+  console.log("HogeHoge")
   const { dispatch } = useContext(CountContext);
-  return <DispatchHoge dispatch={dispatch} />;
+  return (
+    <>
+      <DispatchHoge dispatch={dispatch} />
+    </>
+  )
+  ;
 }
 
 function Foo() {
@@ -93,12 +98,25 @@ function Foo() {
   // const { state } = useContext(CountContext);
   console.log("ふー");
   return useMemo(() => {
+    console.log("ふーasdf");
     return (
       <>
         <h1>foo</h1>
+        <Buzz />
       </>
     );
-  })
+  }, [])
+}
+
+function Buzz() {
+  const { dispatch } = useContext(CountContext);
+  const { state } = useContext(CountContext);
+  console.log("ばず");
+    return (
+      <>
+        <h1>buzz</h1>
+      </>
+    );
 }
 
 export default function MemoDemo() {
@@ -109,6 +127,7 @@ export default function MemoDemo() {
         <Counter />
         <Hoge />
         <Foo />
+        
       </CountProvider>
     </>
   );
