@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { COLORS } from '../../constants.js'
-import { Box, Text, Button, FormLabel, Input } from '@chakra-ui/react'
+import { Box, Text, Button, FormLabel, Input, filter } from '@chakra-ui/react'
 
 export const Home = () => {
   const datas = ([
@@ -16,6 +16,7 @@ export const Home = () => {
     formDataCp.push({text: ""})
     setFormData(formDataCp)
   }
+
 
 // key, value
 const params = ([
@@ -34,6 +35,41 @@ const json = JSON.parse(strJson)
 // console.log(json)
 // console.log(typeof(json))
 
+
+const item = [
+  {
+    id: 0,
+    name: '0user'
+  },
+  {
+    id: 1,
+    name: '1user'
+  },
+  {
+    id: 2,
+    name: '2user'
+  },
+  {
+    id: 2,
+    name: '2user'
+  },
+  {
+    id: 0,
+    name: '0user'
+  },
+  {
+    id: 1,
+    name: '1user'
+  },
+]
+const sort = [0, 2, 1]
+sort.map((map_i) => {
+  // console.log(i)
+  const filItem = item.filter(filter_i => {
+    return filter_i.id === map_i
+  })
+  console.log(filItem)
+})
 
   return (
     <>
@@ -69,6 +105,21 @@ const json = JSON.parse(strJson)
           ))}
         </Box>
         <Button onClick={() => addFormData()}>追加</Button>
+      </Box>
+      <Box mb={5}>
+        <Text fontSize={20} fontWeight="bold">mapとfilterで並び替え</Text>
+        {sort.map((map_i) => {
+
+          const filItem = item.filter(filter_i => {
+            return filter_i.id === map_i
+          })
+
+          return filItem.map((i) => (
+            <>
+              <p>{i.name}</p>
+            </>
+          ))
+        })}
       </Box>
     </>
   );
