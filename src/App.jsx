@@ -13,8 +13,8 @@ import {
 import {
   ChakraProvider,
   Box,
-  // theme,
 } from "@chakra-ui/react";
+import './input.css';
 
 import logo from "./logo.svg";
 // import './App.css';
