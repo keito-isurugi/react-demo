@@ -23,6 +23,7 @@ import { Rendering } from "../rendering/Rendering"
 import { AxiosDemo } from "../axios/AxiosDemo"
 import { CheckboxDemo } from "../chakra/CheckboxDemo";
 import { ImportDemo } from "../import/ImportDemo";
+import { TailwindcssDemo } from "../tailwindcss/TailwindcssDemo";
 import MemoDemo from "../hooks/memo/MemoDemo";
 
 export const Router = () => {
@@ -50,6 +51,7 @@ export const Router = () => {
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/import" element={<ImportDemo />} />
         <Route path="/memo" element={<MemoDemo />} />
+        <Route path="/tailwindcss" element={<TailwindcssDemo />} />
       </Routes>
     </>
   );

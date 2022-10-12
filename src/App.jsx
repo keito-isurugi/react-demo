@@ -29,21 +29,32 @@ import { Dropzone } from "./demo/dropzone/Dropzone";
 import { ChakraResponsive } from "./demo/chakra/ChakraResponsive";
 import { Header } from "./demo/router/Header";
 import { Router } from "./demo/router/Router";
+import { MuiHeader } from "./demo/router/MuiHeader";
+import { MuiRouter } from "./demo/router/MuiRouter";
 
 function App() {
   return (
-    <ChakraProvider>
+    <>
+      <h1 style={{padding: "20px", fontSize: "24px", fontWeight: "bold"}}>Chakra-ui</h1>
+      <ChakraProvider>
+        <BrowserRouter>
+          <Box p={10}>
+            <Header />
+            {/* <Pagination itemsPerPage={4}/>
+          <Dropzone/> */}
+            {/* <h1 className={cssTest.red}>CSS TEST</h1> */}
+            {/* <ChakraResponsive/> */}
+            <Router />
+          </Box>
+        </BrowserRouter>
+      </ChakraProvider>
+
+      <h1 style={{padding: "20px", fontSize: "24px", fontWeight: "bold"}}>Mui</h1>
       <BrowserRouter>
-        <Box p={10}>
-          <Header />
-          {/* <Pagination itemsPerPage={4}/>
-        <Dropzone/> */}
-          {/* <h1 className={cssTest.red}>CSS TEST</h1> */}
-          {/* <ChakraResponsive/> */}
-          <Router />
-        </Box>
+          <MuiHeader />
+          <MuiRouter />
       </BrowserRouter>
-    </ChakraProvider>
+    </>
   );
 }
 

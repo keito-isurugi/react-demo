@@ -29,6 +29,7 @@ export const Header = () => {
       <SNavLink to="/checkbox">checkbox</SNavLink>
       <SNavLink to="/import">import</SNavLink>
       <SNavLink to="/memo">memo</SNavLink>
+      <SNavLink to="/tailwindcss">tailwindcss</SNavLink>
     </Box>
   );
 };
