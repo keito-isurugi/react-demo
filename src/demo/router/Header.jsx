@@ -31,6 +31,7 @@ export const Header = () => {
       <SNavLink to="/memo">memo</SNavLink>
       <SNavLink to="/tailwindcss">tailwindcss</SNavLink>
       <SNavLink to="/react_hook_form">react_hook_form</SNavLink>
+      <SNavLink to="/scroll">scroll</SNavLink>
     </Box>
   );
 };

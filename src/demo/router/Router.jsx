@@ -25,6 +25,7 @@ import { CheckboxDemo } from "../chakra/CheckboxDemo";
 import { ImportDemo } from "../import/ImportDemo";
 import { TailwindcssDemo } from "../tailwindcss/TailwindcssDemo";
 import { ReactHookForm } from "../react_hook_form/ReactHookForm";
+import { Scroll } from "../scroll/Scroll";
 import MemoDemo from "../hooks/memo/MemoDemo";
 
 export const Router = () => {
@@ -54,6 +55,7 @@ export const Router = () => {
         <Route path="/memo" element={<MemoDemo />} />
         <Route path="/tailwindcss" element={<TailwindcssDemo />} />
         <Route path="/react_hook_form" element={<ReactHookForm />} />
+        <Route path="/scroll" element={<Scroll />} />
       </Routes>
     </>
   );
