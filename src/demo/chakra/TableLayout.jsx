@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 
 const tableWrap = {
-  whiteSpace: "wrap",
+  // whiteSpace: "wrap",
   backgroundColor: "red",
 };
 const tableStyle = {

@@ -41,6 +41,7 @@ export const ReactHookForm = () => {
       }, 3000)
     })
   }
+
   function onSubmit(values) {
     console.log(isSubmitting)
     return new Promise((resolve) => {
@@ -50,6 +51,11 @@ export const ReactHookForm = () => {
         console.log(isSubmitting)
       }, 3000)
     })
+  }
+
+  const onFileSubmit = (data) => {
+    console.log(data)
+    alert(JSON.stringify(data))
   }
   return (
     <>
@@ -87,17 +93,22 @@ export const ReactHookForm = () => {
         </Button>
       </form> */}
     {/* ネストしたデータを送信 */}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
           <Input {...register('test.0.id')} />
           <Input {...register('test.0.name')} />
           <Input {...register('test.1.id')} />
           <Input {...register('test.1.name')} />
-          {/* <Input {...register('test.2.id')} />
-          <Input {...register('test.2.name')} /> */}
-        <Button mt={4} colorScheme='teal' isLoading={true} type='submit'>
+          <Input {...register('test.2.id')} />
+          <Input {...register('test.2.name')} />
+        <Button mt={4} colorScheme='teal' isLoading={isLoading} type='submit'>
           送信
         </Button>
-      </form>
+      </form> */}
+      {/* ファイルアップロード */}
+      <form onSubmit={handleSubmit(onFileSubmit)}>
+      <input {...register("picture")} type="file" />
+      <button>Submit</button>
+    </form>
     </>
   )
 }

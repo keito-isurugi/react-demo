@@ -26,8 +26,8 @@ import { ImportDemo } from "../import/ImportDemo";
 import { TailwindcssDemo } from "../tailwindcss/TailwindcssDemo";
 import { ReactHookForm } from "../react_hook_form/ReactHookForm";
 import { Scroll } from "../scroll/Scroll";
+import { ReactPdf } from "../react_pdf/ReactPdf";
 import MemoDemo from "../hooks/memo/MemoDemo";
-
 export const Router = () => {
   return (
     <>
@@ -56,6 +56,7 @@ export const Router = () => {
         <Route path="/tailwindcss" element={<TailwindcssDemo />} />
         <Route path="/react_hook_form" element={<ReactHookForm />} />
         <Route path="/scroll" element={<Scroll />} />
+        <Route path="/react_pdf" element={<ReactPdf />} />
       </Routes>
     </>
   );

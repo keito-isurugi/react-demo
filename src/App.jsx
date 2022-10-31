@@ -31,13 +31,17 @@ import { Header } from "./demo/router/Header";
 import { Router } from "./demo/router/Router";
 import { MuiHeader } from "./demo/router/MuiHeader";
 import { MuiRouter } from "./demo/router/MuiRouter";
+import BasicDocument from "./demo/react_pdf/BasicDocument";
 
 function App() {
   return (
     <>
-      <h1 style={{padding: "20px", fontSize: "24px", fontWeight: "bold"}}>Chakra-ui</h1>
+      {/* <h1 style={{padding: "20px", fontSize: "24px", fontWeight: "bold"}}>Chakra-ui</h1> */}
       <ChakraProvider>
         <BrowserRouter>
+        <Routes>
+          <Route path="/pdf" element={<BasicDocument />} />
+        </Routes>
           <Box p={10}>
             <Header />
             {/* <Pagination itemsPerPage={4}/>

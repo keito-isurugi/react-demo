@@ -47,8 +47,8 @@ export const Map = () => {
   };
   
   const positionIwamotocho = {
-    lat: 35.69397,
-    lng: 139.7762,
+    lat: 36.69397,
+    lng: 137.7762,
   };
 
     const geocode = () => {
@@ -76,7 +76,7 @@ export const Map = () => {
       <LoadScript googleMapsApiKey={ApiKey}>
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
           <Marker position={positionAkiba} label={markerLabelAkiba} />
-          {/* <Marker position={positionIwamotocho} label={markerLabelIwamotocho} /> */}
+          <Marker position={positionIwamotocho} label={markerLabelIwamotocho} />
         </GoogleMap>
       </LoadScript>
       <Box w="30%">
