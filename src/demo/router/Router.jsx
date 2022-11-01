@@ -29,6 +29,7 @@ import { Scroll } from "../scroll/Scroll";
 import { ReactPdf } from "../react_pdf/ReactPdf";
 import MemoDemo from "../hooks/memo/MemoDemo";
 import { ExceljsDemo } from "../exceljs/ExceljsDemo";
+import { Progressbar } from "../progressbar/Progressbar";
 
 export const Router = () => {
   return (
@@ -60,6 +61,7 @@ export const Router = () => {
         <Route path="/scroll" element={<Scroll />} />
         <Route path="/react_pdf" element={<ReactPdf />} />
         <Route path="/exceljs" element={<ExceljsDemo />} />
+        <Route path="/progress" element={<Progressbar />} />
       </Routes>
     </>
   );
