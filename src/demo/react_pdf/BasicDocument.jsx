@@ -1,20 +1,9 @@
 import { PDFDownloadLink, PDFViewer, Page, Text, View, Font, Document, StyleSheet } from '@react-pdf/renderer';
-import {
-  Box,
-  Text as CText,
-} from "@chakra-ui/react";
 
-// 日本語文字化け用
-import fontRegular from '../../fonts/Nasu-Regular.ttf'  //ttfファイル参照
-import fontBold from '../../fonts/Nasu-Bold.ttf'        //ttfファイル参照
-import { width } from '@mui/system';
-// Create styles
-const styles = StyleSheet.create({
-  
+// 日本語文字化け対策用
+import fontRegular from '../../fonts/Nasu-Regular.ttf' 
+import fontBold from '../../fonts/Nasu-Bold.ttf'
 
-});
-
-// Create Document Component
 function BasicDocument() {
   // フォント「ナス レギュラー」
   Font.register({
@@ -149,10 +138,6 @@ function BasicDocument() {
       padding: 10,
     },
     viewer: {
-      // width: window.innerWidth, //the pdf viewer will take up all of the width and height
-      // height: window.innerHeight,
-      // width: "100vw", //the pdf viewer will take up all of the width and height
-      // height: "100vh",
       position: "absolute",
       left: 0,
       top: 0,

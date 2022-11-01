@@ -28,6 +28,8 @@ import { ReactHookForm } from "../react_hook_form/ReactHookForm";
 import { Scroll } from "../scroll/Scroll";
 import { ReactPdf } from "../react_pdf/ReactPdf";
 import MemoDemo from "../hooks/memo/MemoDemo";
+import { ExceljsDemo } from "../exceljs/ExceljsDemo";
+
 export const Router = () => {
   return (
     <>
@@ -57,6 +59,7 @@ export const Router = () => {
         <Route path="/react_hook_form" element={<ReactHookForm />} />
         <Route path="/scroll" element={<Scroll />} />
         <Route path="/react_pdf" element={<ReactPdf />} />
+        <Route path="/exceljs" element={<ExceljsDemo />} />
       </Routes>
     </>
   );
