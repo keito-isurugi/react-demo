@@ -24,7 +24,7 @@ export const Header = () => {
       <SNavLink to="/use_context">use_context</SNavLink>
       <SNavLink to="/use_ref">use_ref</SNavLink>
       <SNavLink to="/props">props</SNavLink>
-      <SNavLink to="/rendering">rendering</SNavLink>
+      <SNavLink to="/re_rendering">re_rendering</SNavLink>
       <SNavLink to="/axios">axios</SNavLink>
       <SNavLink to="/checkbox">checkbox</SNavLink>
       <SNavLink to="/import">import</SNavLink>
@@ -35,6 +35,7 @@ export const Header = () => {
       <SNavLink to="/react_pdf">react_pdf</SNavLink>
       <SNavLink to="/exceljs">exceljs</SNavLink>
       <SNavLink to="/progress">progressbar</SNavLink>
+      <SNavLink to="/search_box">search_box</SNavLink>
     </Box>
   );
 };

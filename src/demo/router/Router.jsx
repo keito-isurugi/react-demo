@@ -19,7 +19,7 @@ import { ColorPicker } from "../color_picker/ColorPicker";
 import { BigParent } from "../hooks/usecontext/BigParent";
 import { Ref } from "../hooks/Ref";
 import { Props } from "../props/Props"
-import { Rendering } from "../rendering/Rendering"
+import { ReRenderingDemo } from "../re_rendering/ReRenderingDemo"
 import { AxiosDemo } from "../axios/AxiosDemo"
 import { CheckboxDemo } from "../chakra/CheckboxDemo";
 import { ImportDemo } from "../import/ImportDemo";
@@ -30,6 +30,7 @@ import { ReactPdf } from "../react_pdf/ReactPdf";
 import MemoDemo from "../hooks/memo/MemoDemo";
 import { ExceljsDemo } from "../exceljs/ExceljsDemo";
 import { Progressbar } from "../progressbar/Progressbar";
+import { SearchBox } from "../search_box/SearchBox";
 
 export const Router = () => {
   return (
@@ -51,7 +52,7 @@ export const Router = () => {
         <Route path="/use_context" element={<BigParent />} />
         <Route path="/use_ref" element={<Ref />} />
         <Route path="/props" element={<Props />} />
-        <Route path="/rendering" element={<Rendering />} />
+        <Route path="/re_rendering" element={<ReRenderingDemo />} />
         <Route path="/axios" element={<AxiosDemo />} />
         <Route path="/checkbox" element={<CheckboxDemo />} />
         <Route path="/import" element={<ImportDemo />} />
@@ -62,6 +63,7 @@ export const Router = () => {
         <Route path="/react_pdf" element={<ReactPdf />} />
         <Route path="/exceljs" element={<ExceljsDemo />} />
         <Route path="/progress" element={<Progressbar />} />
+        <Route path="/search_box" element={<SearchBox />} />
       </Routes>
     </>
   );

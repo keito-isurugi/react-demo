@@ -1,5 +1,7 @@
 import styles from "./scroll.module.css";
-
+import {
+Text
+} from '@chakra-ui/react'
 export const Css = () => {
   return (
     <div>
@@ -28,6 +30,7 @@ export const Css = () => {
           <h2 className={styles.childStyle}>aaaa</h2>
         </div>
       </div>
+      <Text className={styles.hoge}>aaaaaaa</Text>
     </div>
   );
 };

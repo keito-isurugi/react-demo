@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm, useFieldArray, Controller, useWatch } from "react-hook-form";
+import Select from "react-select";
 import {
   FormErrorMessage,
   FormLabel,
@@ -15,7 +16,8 @@ export const ReactHookForm = () => {
     {id:3, name: 'ccc'}
   ]
   const { register, control, handleSubmit, reset, watch, formState: { errors, isSubmitting }, } = useForm({
-    defaultValues: { test: data }
+    // defaultValues: { test: data }
+    defaultValues: { id: 2 }
   });
   // const {
   //   fields,
@@ -57,6 +59,13 @@ export const ReactHookForm = () => {
     console.log(data)
     alert(JSON.stringify(data))
   }
+
+  const Options = [
+    { value: 1, label: "りんご" },
+    { value: 2, label: "みかん" },
+    { value: 3, label: "バナナ" },
+  ];
+
   return (
     <>
     {/* ログイン */}
@@ -105,10 +114,31 @@ export const ReactHookForm = () => {
         </Button>
       </form> */}
       {/* ファイルアップロード */}
-      <form onSubmit={handleSubmit(onFileSubmit)}>
-      <input {...register("picture")} type="file" />
-      <button>Submit</button>
-    </form>
+      {/* <form onSubmit={handleSubmit(onFileSubmit)}>
+        <input {...register("picture")} type="file" />
+        <button>Submit</button>
+      </form> */}
+      {/* react-selectで使う */}
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div>
+        <Controller
+          name="id"
+          control={control}
+          render={({ field }) => (
+            <Select
+              options={Options}
+              value={Options.find((x) => x.value === field.value)}
+              onChange={(newValue) => {
+                field.onChange(newValue?.value);
+              }}
+            />
+          )}
+        />
+      </div>
+      <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
+          Submit
+      </Button>
+      </form>
     </>
   )
 }
