@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect, useMemo} from 'react'
 import { useForm, useFieldArray, Controller, useWatch } from "react-hook-form";
 import Select from "react-select";
 import {
@@ -6,19 +6,49 @@ import {
   FormLabel,
   FormControl,
   Input,
-  Button,
+  Button
 } from '@chakra-ui/react'
 
 export const ReactHookForm = () => {
-  const data = [
-    {id:1, name: 'aaa'},
-    {id:2, name: 'bbb'},
-    {id:3, name: 'ccc'}
-  ]
+
+  const data = {
+    test:[
+      {id:1, name: 'aaa'},
+      {id:2, name: 'bbb'},
+      {id:3, name: 'ccc'}
+    ]
+  }
+
+  const defaultValues = useMemo(() => {
+    // const dataCp = {...data}
+    // console.log(data)
+    // console.log(dataCp)
+    // if(window.location.pathname.match(/works/)) {
+    //     // tagDefaultValueName.forEach((e, index) => {
+    //     //     dataCp["aaa"] = {}
+    //     //     dataCp["aaa"][e] = ''
+    //     // });
+    //     dataCp.aaa = {}
+    // }
+    // console.log(dataCp)
+      return data
+  }, [data]);
+
+  useEffect(() => {
+    // reset({ ...defaultValues });
+  }, [defaultValues]);
+
+  const addFieldName = () => {
+    alert(JSON.stringify(defaultValues))
+    defaultValues["hoge"] = {}
+    alert(JSON.stringify(defaultValues))
+  }
   const { register, control, handleSubmit, reset, watch, formState: { errors, isSubmitting }, } = useForm({
     // defaultValues: { test: data }
-    defaultValues: { id: 2 }
+    // defaultValues: { id: 2 }
+    defaultValues
   });
+
   // const {
   //   fields,
   //   append,
@@ -35,23 +65,30 @@ export const ReactHookForm = () => {
   // }
   // );
 
+
+
+
+
+
   function loginonSubmit(values) {
     return new Promise((resolve) => {
       setTimeout(() => {
         alert(JSON.stringify(values, null, 2))
         resolve()
-      }, 3000)
+      }, 1000)
     })
   }
+
 
   function onSubmit(values) {
     console.log(isSubmitting)
     return new Promise((resolve) => {
       setTimeout(() => {
+        // alert(values)
         alert(JSON.stringify(values, null, 2))
         resolve()
         console.log(isSubmitting)
-      }, 3000)
+      }, 500)
     })
   }
 
@@ -102,24 +139,30 @@ export const ReactHookForm = () => {
         </Button>
       </form> */}
     {/* ネストしたデータを送信 */}
-      {/* <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
           <Input {...register('test.0.id')} />
           <Input {...register('test.0.name')} />
           <Input {...register('test.1.id')} />
           <Input {...register('test.1.name')} />
           <Input {...register('test.2.id')} />
           <Input {...register('test.2.name')} />
-        <Button mt={4} colorScheme='teal' isLoading={isLoading} type='submit'>
+          <p>fieldName"hoge"追加</p>
+          <Input {...register('hoge.0.age')} />
+          <Input {...register('hoge.0.add')} />
+          <Input {...register('hoge.1.age')} />
+          <Input {...register('hoge.1.add')} />
+        <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
           送信
         </Button>
-      </form> */}
+        <Button onClick={() => addFieldName()}>要素追加</Button>
+      </form>
       {/* ファイルアップロード */}
       {/* <form onSubmit={handleSubmit(onFileSubmit)}>
         <input {...register("picture")} type="file" />
         <button>Submit</button>
       </form> */}
       {/* react-selectで使う */}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
         <div>
         <Controller
           name="id"
@@ -138,7 +181,7 @@ export const ReactHookForm = () => {
       <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
           Submit
       </Button>
-      </form>
+      </form> */}
     </>
   )
 }
