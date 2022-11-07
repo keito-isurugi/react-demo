@@ -15,7 +15,7 @@ export const Header = () => {
       <SNavLink to="/chakra_responsive">chakra_responsive</SNavLink>
       <SNavLink to="/loading">loading</SNavLink>
       <SNavLink to="/sendrequest">sendrequest</SNavLink>
-      <SNavLink to="/map">map</SNavLink>
+      <SNavLink to="/map">GoogleMap</SNavLink>
       <SNavLink to="/table">table</SNavLink>
       <SNavLink to="/dnd">dnd</SNavLink>
       <SNavLink to="/hooks">hooks</SNavLink>

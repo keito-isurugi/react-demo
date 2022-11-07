@@ -7,6 +7,7 @@ import {
 } from "@react-google-maps/api";
 import { Box, Text, Button, Input, FormLabel } from "@chakra-ui/react";
 import ApiKey from "../../const/api";
+import pinHouse from "./pin_house.png"
 
 
 const containerStyle = {
@@ -20,14 +21,16 @@ const markerLabelAkiba = {
   fontSize: "15px",
   fontWeight: "100",
   text: "5",
+  zIndex: "999"
 };
 
 const markerLabelIwamotocho = {
-  color: "white",
+  color: "blue",
   fontFamily: "sans-serif",
-  fontSize: "15px",
+  fontSize: "30px",
   fontWeight: "100",
   text: "12",
+  zIndex: "0"
 };
 
 export const Map = () => {
@@ -44,6 +47,10 @@ export const Map = () => {
   const positionAkiba = {
     lat: lat,
     lng: lon,
+  };
+  const positionAkiba2 = {
+    lat: 36.687669847803263,
+    lng: 137.2187549153435,
   };
   
   const positionIwamotocho = {
@@ -70,13 +77,21 @@ export const Map = () => {
       });
     }
 
+    
+
   return (
     <>
       <h1>Google Map</h1>
       <LoadScript googleMapsApiKey={ApiKey}>
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-          <Marker position={positionAkiba} label={markerLabelAkiba} />
-          <Marker position={positionIwamotocho} label={markerLabelIwamotocho} />
+        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={18}>
+          <Marker position={positionAkiba2} zIndex={0} icon="https://maps.google.com/mapfiles/ms/micons/blue.png"/>
+          <Marker position={positionAkiba} label={markerLabelAkiba} draggable={true} 
+          onDragEnd={(e) => markerDragEnd(e)} 
+          icon={pinHouse}
+          zIndex={999}
+          />
+          {/* <Marker position={positionAkiba} label={markerLabelAkiba} draggable={true} onDragEnd={(e) => console.log(e.latLng.lat())} /> */}
+          <Marker position={positionIwamotocho} label={markerLabelIwamotocho} draggable={true}/>
         </GoogleMap>
       </LoadScript>
       <Box w="30%">
@@ -88,6 +103,7 @@ export const Map = () => {
         <FormLabel>経度</FormLabel>
         <Input placeholder="経度" onChange={(e) => setLon(Number(e.target.value))} value={lon}/>
       </Box>
+      <img src={pinHouse} alt="" />
     </>
   );
 };
