@@ -8,6 +8,7 @@ import {
 import { Box, Text, Button, Input, FormLabel } from "@chakra-ui/react";
 import ApiKey from "../../const/api";
 import pinHouse from "./pin_house.png"
+import MarkersAndInfoWindow from "./MarkersAndInfoWindow"
 
 
 const containerStyle = {
@@ -77,8 +78,11 @@ export const Map = () => {
       });
     }
 
+    const divStyle = {
+      background: "white",
+      fontSize: 7.5,
+    };
     
-
   return (
     <>
       <h1>Google Map</h1>
@@ -90,6 +94,11 @@ export const Map = () => {
           icon={pinHouse}
           zIndex={999}
           />
+          <InfoWindow position={positionAkiba}>
+            <div style={divStyle}>
+              <h1>秋葉原オフィス</h1>
+            </div>
+          </InfoWindow>
           {/* <Marker position={positionAkiba} label={markerLabelAkiba} draggable={true} onDragEnd={(e) => console.log(e.latLng.lat())} /> */}
           <Marker position={positionIwamotocho} label={markerLabelIwamotocho} draggable={true}/>
         </GoogleMap>
@@ -104,6 +113,9 @@ export const Map = () => {
         <Input placeholder="経度" onChange={(e) => setLon(Number(e.target.value))} value={lon}/>
       </Box>
       <img src={pinHouse} alt="" />
+      <LoadScript googleMapsApiKey={ApiKey}>
+        <MarkersAndInfoWindow/>
+      </LoadScript>
     </>
   );
 };

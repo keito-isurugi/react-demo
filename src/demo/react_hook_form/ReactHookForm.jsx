@@ -43,7 +43,7 @@ export const ReactHookForm = () => {
     defaultValues["hoge"] = {}
     alert(JSON.stringify(defaultValues))
   }
-  const { register, control, handleSubmit, reset, watch, formState: { errors, isSubmitting }, } = useForm({
+  const { register, control, handleSubmit, clearErrors, reset, watch, formState: { errors, isSubmitting }, } = useForm({
     // defaultValues: { test: data }
     // defaultValues: { id: 2 }
     defaultValues
@@ -106,14 +106,14 @@ export const ReactHookForm = () => {
   return (
     <>
     {/* ログイン */}
-      {/* <form onSubmit={handleSubmit(loginonSubmit)}>
+      <form onSubmit={e => {clearErrors(); handleSubmit(loginonSubmit)(e)}}>
         <FormControl isInvalid={errors.account}>
           <FormLabel htmlFor='account'>アカウント</FormLabel>
           <Input
             id='account'
             placeholder='アカウント'
             {...register('account', {
-              required: '入力してください',
+              required: '必須項目です。',
               minLength: { value: 4, message: '4文字以上で入力してください' },
             })}
           />
@@ -137,9 +137,9 @@ export const ReactHookForm = () => {
         <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
           ログイン
         </Button>
-      </form> */}
+      </form>
     {/* ネストしたデータを送信 */}
-      <form onSubmit={handleSubmit(onSubmit)}>
+      {/* <form onSubmit={handleSubmit(onSubmit)}>
           <Input {...register('test.0.id')} />
           <Input {...register('test.0.name')} />
           <Input {...register('test.1.id')} />
@@ -155,7 +155,7 @@ export const ReactHookForm = () => {
           送信
         </Button>
         <Button onClick={() => addFieldName()}>要素追加</Button>
-      </form>
+      </form> */}
       {/* ファイルアップロード */}
       {/* <form onSubmit={handleSubmit(onFileSubmit)}>
         <input {...register("picture")} type="file" />
