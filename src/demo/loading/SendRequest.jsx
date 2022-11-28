@@ -4,8 +4,6 @@ import { Loading } from "./Loading";
 import axios from "axios";
 import { Button } from "@chakra-ui/react";
 
-// import { getAPI } from "../axiosGetAPI";
-
 export const SendRequest = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [resData, setResData] = useState(null);

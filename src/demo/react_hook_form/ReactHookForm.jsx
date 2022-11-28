@@ -1,5 +1,6 @@
 import React, {useState, useEffect, useMemo} from 'react'
 import { useForm, useFieldArray, Controller, useWatch } from "react-hook-form";
+import axios from "axios";
 import Select from "react-select";
 import {
   FormErrorMessage,
@@ -71,11 +72,27 @@ export const ReactHookForm = () => {
 
 
   function loginonSubmit(values) {
+    console.log(isSubmitting)
     return new Promise((resolve) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2))
+      console.log(isSubmitting)
+      axios
+      .get("https://jsonplaceholder.typicode.com/photos")
+      .then((res) => {
+        console.log(isSubmitting)
+        // setResData(res.data);
+        // setIsLoading(false);
         resolve()
-      }, 1000)
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
+      // setTimeout(() => {
+      //   console.log(isSubmitting)
+      //   alert(JSON.stringify(values, null, 2))
+      //   resolve()
+      //   console.log(isSubmitting)
+      // }, 1000)
     })
   }
 
@@ -84,7 +101,6 @@ export const ReactHookForm = () => {
     console.log(isSubmitting)
     return new Promise((resolve) => {
       setTimeout(() => {
-        // alert(values)
         alert(JSON.stringify(values, null, 2))
         resolve()
         console.log(isSubmitting)

@@ -3,6 +3,16 @@ import { COLORS } from '../../constants.js'
 import { Box, Text, Button, FormLabel, Input, filter } from '@chakra-ui/react'
 
 export const Home = () => {
+  // 定期更新処理
+  const [now, setNow] = useState(new Date());
+  useEffect(function() {
+    const intervalId = setInterval(function() {
+      setNow(new Date());
+    }, 20000);
+    return function(){clearInterval(intervalId)};
+  }, [now]);
+  console.log(now)
+
   const datas = ([
     {text: "aaa"},
     {text: "bbb"},

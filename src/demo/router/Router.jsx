@@ -31,6 +31,7 @@ import MemoDemo from "../hooks/memo/MemoDemo";
 import { ExceljsDemo } from "../exceljs/ExceljsDemo";
 import { Progressbar } from "../progressbar/Progressbar";
 import { SearchBox } from "../search_box/SearchBox";
+import { DatePickerDemo } from "../date_picker/DatePickerDemo";
 
 export const Router = () => {
   return (
@@ -64,6 +65,7 @@ export const Router = () => {
         <Route path="/exceljs" element={<ExceljsDemo />} />
         <Route path="/progress" element={<Progressbar />} />
         <Route path="/search_box" element={<SearchBox />} />
+        <Route path="/date_picker" element={<DatePickerDemo />} />
       </Routes>
     </>
   );
