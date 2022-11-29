@@ -16,10 +16,10 @@ export const DatePickerDemo = () => {
 		<Box w="200px">
 		 <DatePickerComponents 
 				selected={startDate} 
-				selectsStart
-				locale='ja' 
 				onChange={(date) => setStartDate(date)} 
 				dateFormat="yyyy-MM-dd"
+				selectsStart
+				// calendarStartDay={1}
 			/>
 			<Box>a</Box>
 		 <DatePicker 

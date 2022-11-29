@@ -8,9 +8,14 @@ import "../react-datepicker.css";
 registerLocale('ja', ja)
 
 export const DatePickerComponents = (props) => {
+  const {onChange, onBlur, value} = props
+
   return (
     <div className="light-theme-original">
       <ReactDatePicker
+        onChange={onChange}
+        onBlur={onBlur}
+        selected={value}
         locale={ja}
         renderCustomHeader={({ date, decreaseMonth, increaseMonth }) => (
           <div className="datepicker__header react-datepicker__current-month">

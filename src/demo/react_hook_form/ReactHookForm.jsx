@@ -2,6 +2,8 @@ import React, {useState, useEffect, useMemo} from 'react'
 import { useForm, useFieldArray, Controller, useWatch } from "react-hook-form";
 import axios from "axios";
 import Select from "react-select";
+import ReactDatePicker from "react-datepicker";
+
 import {
   FormErrorMessage,
   FormLabel,
@@ -11,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 import AccountInput from './AccountInput';
 import PasswordInput from './PasswordInput';
+import { DatePickerComponents } from '../date_picker/components/DatePickerComponents';
 
 export const ReactHookForm = () => {
 
@@ -74,28 +77,28 @@ export const ReactHookForm = () => {
 
 
   function loginonSubmit(values) {
-    console.log(isSubmitting)
-    // return new Promise((resolve) => {
-    //   console.log(isSubmitting)
-    //   axios
-    //   .get("https://jsonplaceholder.typicode.com/photos")
-    //   .then((res) => {
-    //     console.log(isSubmitting)
-    //     // setResData(res.data);
-    //     // setIsLoading(false);
-    //     resolve()
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //     setIsLoading(false);
-    //   });
-    //   // setTimeout(() => {
-    //   //   console.log(isSubmitting)
-    //   //   alert(JSON.stringify(values, null, 2))
-    //   //   resolve()
-    //   //   console.log(isSubmitting)
-    //   // }, 1000)
-    // })
+    // console.log(isSubmitting)
+    return new Promise((resolve) => {
+      // console.log(isSubmitting)
+      // axios
+      // .get("https://jsonplaceholder.typicode.com/photos")
+      // .then((res) => {
+      //   console.log(isSubmitting)
+      //   // setResData(res.data);
+      //   // setIsLoading(false);
+      //   resolve()
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      //   setIsLoading(false);
+      // });
+      setTimeout(() => {
+        console.log(isSubmitting)
+        alert(JSON.stringify(values, null, 2))
+        resolve()
+        console.log(isSubmitting)
+      }, 1000)
+    })
   }
 
 
@@ -125,8 +128,8 @@ export const ReactHookForm = () => {
     <>
     {/* ログイン */}
       <form onSubmit={e => {clearErrors(); handleSubmit(loginonSubmit)(e)}}>
-        <AccountInput register={register} errors={errors}/>
-        <PasswordInput register={register} errors={errors}/>
+
+        {/* 通常 */}
         {/* <FormControl isInvalid={errors.account}>
           <FormLabel htmlFor='account'>アカウント</FormLabel>
           <Input
@@ -157,6 +160,30 @@ export const ReactHookForm = () => {
             {errors.password && errors.password.message}
           </FormErrorMessage>
         </FormControl> */}
+
+        {/* コンポーネント分割 */}
+        {/* <AccountInput register={register} errors={errors}/>
+        <PasswordInput register={register} errors={errors}/> */}
+
+        <Controller
+          control={control}
+          name="sdate"
+          render={({ field: { onChange, onBlur, value, ref } }) => (
+            // ヘッダーカスタムバージョン
+            <DatePickerComponents 
+              onChange={onChange}
+              onBlur={onBlur}
+              selected={value}
+              dateFormat="yyyy-MM-dd"
+            />
+            // 通常
+            // <ReactDatePicker
+            //   onChange={onChange}
+            //   onBlur={onBlur}
+            //   selected={value}
+            // />
+          )}
+        />
         <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
           ログイン
         </Button>
