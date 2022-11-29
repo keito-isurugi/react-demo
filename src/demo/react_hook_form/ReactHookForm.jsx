@@ -9,6 +9,8 @@ import {
   Input,
   Button
 } from '@chakra-ui/react'
+import AccountInput from './AccountInput';
+import PasswordInput from './PasswordInput';
 
 export const ReactHookForm = () => {
 
@@ -73,27 +75,27 @@ export const ReactHookForm = () => {
 
   function loginonSubmit(values) {
     console.log(isSubmitting)
-    return new Promise((resolve) => {
-      console.log(isSubmitting)
-      axios
-      .get("https://jsonplaceholder.typicode.com/photos")
-      .then((res) => {
-        console.log(isSubmitting)
-        // setResData(res.data);
-        // setIsLoading(false);
-        resolve()
-      })
-      .catch((error) => {
-        console.log(error);
-        setIsLoading(false);
-      });
-      // setTimeout(() => {
-      //   console.log(isSubmitting)
-      //   alert(JSON.stringify(values, null, 2))
-      //   resolve()
-      //   console.log(isSubmitting)
-      // }, 1000)
-    })
+    // return new Promise((resolve) => {
+    //   console.log(isSubmitting)
+    //   axios
+    //   .get("https://jsonplaceholder.typicode.com/photos")
+    //   .then((res) => {
+    //     console.log(isSubmitting)
+    //     // setResData(res.data);
+    //     // setIsLoading(false);
+    //     resolve()
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //     setIsLoading(false);
+    //   });
+    //   // setTimeout(() => {
+    //   //   console.log(isSubmitting)
+    //   //   alert(JSON.stringify(values, null, 2))
+    //   //   resolve()
+    //   //   console.log(isSubmitting)
+    //   // }, 1000)
+    // })
   }
 
 
@@ -123,7 +125,9 @@ export const ReactHookForm = () => {
     <>
     {/* ログイン */}
       <form onSubmit={e => {clearErrors(); handleSubmit(loginonSubmit)(e)}}>
-        <FormControl isInvalid={errors.account}>
+        <AccountInput register={register} errors={errors}/>
+        <PasswordInput register={register} errors={errors}/>
+        {/* <FormControl isInvalid={errors.account}>
           <FormLabel htmlFor='account'>アカウント</FormLabel>
           <Input
             id='account'
@@ -136,6 +140,9 @@ export const ReactHookForm = () => {
           <FormErrorMessage>
             {errors.account && errors.account.message}
           </FormErrorMessage>
+        </FormControl> */}
+
+        {/* <FormControl isInvalid={errors.password}>
           <FormLabel htmlFor='password'>パスワード</FormLabel>
           <Input
             id='password'
@@ -149,7 +156,7 @@ export const ReactHookForm = () => {
           <FormErrorMessage>
             {errors.password && errors.password.message}
           </FormErrorMessage>
-        </FormControl>
+        </FormControl> */}
         <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
           ログイン
         </Button>
