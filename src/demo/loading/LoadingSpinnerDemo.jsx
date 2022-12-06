@@ -116,7 +116,7 @@ export const LoadingSpinnerDemo = () => {
       <p>ThreeCircles</p>
       <ThreeCircles/>
       <p>ThreeDots</p>
-      <ThreeDots/>
+      <ThreeDots color="blue"/>
       <p>Triangle</p>
       <Triangle/>
       <p>Vortex</p>

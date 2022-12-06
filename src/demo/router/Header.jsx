@@ -37,6 +37,8 @@ export const Header = () => {
       <SNavLink to="/progress">progressbar</SNavLink>
       <SNavLink to="/search_box">search_box</SNavLink>
       <SNavLink to="/date_picker">date_picker</SNavLink>
+      <SNavLink to="/toggle_button">toggle_button</SNavLink>
+      <SNavLink to="/react_print">react_print</SNavLink>
     </Box>
   );
 };

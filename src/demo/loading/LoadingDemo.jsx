@@ -47,7 +47,7 @@ export const LoadingDemo = () => {
       <p>TailSpin</p>
       <TailSpin width="50" />
       <p>ThreeDots</p>
-      <ThreeDots width="50" />
+      <ThreeDots width="50" color="red"/>
     </>
   );
 };

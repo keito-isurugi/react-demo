@@ -49,6 +49,7 @@ export const Exceljs2 = () => {
       row.getCell(3).value = item.cust_name;
       row.getCell(4).value = item.cust_contact;
       row.getCell(5).value = item.site_name;
+      row.getCell(5).value += 'hogehoge';
       // row.getCell(6).value = item.detail;
       row.getCell(7).value = item.comp_time;
       // row.getCell(8).value = item.means_reporting;

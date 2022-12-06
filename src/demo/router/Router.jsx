@@ -32,6 +32,8 @@ import { ExceljsDemo } from "../exceljs/ExceljsDemo";
 import { Progressbar } from "../progressbar/Progressbar";
 import { SearchBox } from "../search_box/SearchBox";
 import { DatePickerDemo } from "../date_picker/DatePickerDemo";
+import { ToggleButton } from "../toggle_btn/ToggleButton";
+import { ReactPrintDemo } from "../react_print/ReactPrintDemo";
 
 export const Router = () => {
   return (
@@ -66,6 +68,8 @@ export const Router = () => {
         <Route path="/progress" element={<Progressbar />} />
         <Route path="/search_box" element={<SearchBox />} />
         <Route path="/date_picker" element={<DatePickerDemo />} />
+        <Route path="/toggle_button" element={<ToggleButton />} />
+        <Route path="/react_print" element={<ReactPrintDemo />} />
       </Routes>
     </>
   );
