@@ -33,7 +33,6 @@ const SampleProvider = (props) => {
 };
 
 export const BigParent = () => {
-
   return (
     <div>
       <Text fontSize={30} fontWeight="bold">useContextデモ</Text>

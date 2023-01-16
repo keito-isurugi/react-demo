@@ -11,7 +11,7 @@ console.log("子コンポーネント")
 export const Parent = () => {
   // 共有しているstateを分割代入
   const {text, setText, setDatas} = useContext(SampleContext);
-
+  
   return (
     <>
       {/* 4, Childコンポーネントにはpropsで値を渡さない */}
